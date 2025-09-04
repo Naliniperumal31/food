@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: #ff7043;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #ff7043;
+      text-align: center;
+    }
+    .skills {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .skill-box {
+      background: #ffe0b2;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px;
+      flex: 1 1 200px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skill-box:hover {
+      transform: scale(1.05);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background: #ff7043;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #e64a19;
+    }
+    footer {
+      background: #ff7043;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🍴 My Food Portfolio</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m a passionate food lover who enjoys exploring new flavors and creating delicious dishes. 
+       Cooking for me is not just about taste, but also about creativity, presentation, and sharing joy 
+       through food. This portfolio showcases my love for culinary arts.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <div class="skill-box">
+        <h3>🍳 Cooking</h3>
+        <p>Expert in Indian, Continental, and Fusion dishes.</p>
+      </div>
+      <div class="skill-box">
+        <h3>📸 Food Photography</h3>
+        <p>Capturing mouth-watering food moments.</p>
+      </div>
+      <div class="skill-box">
+        <h3>✍️ Recipe Writing</h3>
+        <p>Creative and easy-to-follow recipe documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="response" style="text-align:center; margin-top:10px; color:green;"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Food Portfolio | Made with ❤️</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      document.getElementById("response").innerText = "✅ Thank you! Your message has been sent.";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
